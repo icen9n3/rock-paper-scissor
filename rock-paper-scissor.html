@@ -6,28 +6,50 @@
 </head>
 <body>
     <script>
-        
+       
+let computerPlay;
 
-let playerChoice = prompt("Choose Rock, Paper, or Scissor");
+function playRound(playerSelection, computerSelection) {
+//Player Choice
+playerSelection = prompt("Choose Rock, Paper, or Scissor");
+return playerSelection.toUpperCase();
 
-         
-function computerPlay() {
+//Computers choice
+const computerSelection = function computerPlay() {
 const compChoices = ["Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor"];
-  let compRandom = compChoices[Math.floor(Math.random() * 15)];
-  return compRandom;
- }
-/*
- if (playerSelection == "Rock" && computerPlay == "Paper")
-alert("Player Lose: Paper beats Rock");}
-else if (playerSelection == "Rock" && computerPlay == "Scissor")
- {alert("player wins")}
-*/
+  computerSelection = compChoices[Math.floor(Math.random() * 15)];
+  return computerSelection.toUpperCase;}
 
 
+  // Find Results
 
+  //Tie
+  if (playerSelection == "ROCK" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "PARER" ||
+  playerSelection == "SCISSOR" && computerSelection == "SCISSOR" )
+{ alert("Tie Game")}
 
-    
- 
+// Player point
+    else if (playerSelection == "ROCK" && computerSelection == "SCISSOR")
+    {alert("Player wins! Rock beats Scissor")}
+
+    else if (playerSelection == "SCISSOR" && computerSelection == "PAPER")
+    {alert("Player wins! Scissor beats Paper")}
+
+    else if (playerSelection == "PAPER" && computerSelection == "ROCK")
+    {alert("Player wins! Paper covers Rock")}
+
+    // Computer point
+    else if (playerSelection == "ROCK" && computerSelection == "PAPER")
+    {alert("Player loses! Paper covers Rock")}
+
+    else if (playerSelection == "SCISSOR" && computerSelection == "ROCK")
+    {alert("Player loses! Rock beats Scissors")}
+
+    else if (playerSelection == "PAPER" && computerSelection == "SCISSOR")
+    {alert("Player loses! Scissor cuts Paper")}
+
+    else {alert("error")};
+}
     
     </script>
 
