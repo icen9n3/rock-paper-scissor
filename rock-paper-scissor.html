@@ -6,10 +6,8 @@
 </head>
 <body>
     <script>
-
        
-function game() {
-    
+function game() {    
 let playerScore = 0;
 let computerScore = 0;
     alert("Round 1")
@@ -27,19 +25,13 @@ let computerScore = 0;
       alert("Round 5")
     playRound();
     alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
+  
   if ( playerScore > computerScore){alert("Player wins!")}
   else if ( playerScore < computerScore) {alert("Player loses!")}
-  else { alert("Tie Game!")}
+  else { alert("Tie Game!")} 
 
-
- 
- 
-
-
+//playRound
 function playRound(computerSelection, playerSelection) {
-    //Player Choice
-
-
 
 //Computers choice
 computerSelection = computerPlay()
@@ -48,16 +40,14 @@ const compChoices = ["ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR","ROC
 randomChoice = compChoices[Math.floor(Math.random() * 15)];
 return randomChoice;}
 
+//Player Choice
 playerSelection = prompt("Choose Rock, Paper, or Scissor", "Type your selection here").toUpperCase();
 
-
 // Find Results
-
   //Tie
   if (playerSelection == "ROCK" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "PARER" ||
   playerSelection == "SCISSOR" && computerSelection == "SCISSOR" )
 { alert("Tie Game")}
-
 // Player point
     else if (playerSelection == "ROCK" && computerSelection == "SCISSOR")
     {   playerScore += 1;
@@ -84,8 +74,9 @@ playerSelection = prompt("Choose Rock, Paper, or Scissor", "Type your selection 
     {computerScore += 1;
         alert("Player loses! Scissor cuts Paper")}
 
-    else {alert("error")};
-}}
+    else {alert("error - invalid input")};
+}
+    }
  
     </script>
 
