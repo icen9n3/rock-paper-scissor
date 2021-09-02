@@ -6,22 +6,32 @@
 </head>
 <body>
     <script>
+
+
        
-let computerPlay;
+ 
+ 
+
+
+
+
+
+
+//Computers choice
+const computerSelection = computerPlay();
+function computerPlay(randomChoice){
+const compChoices = ["ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR","ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR", "ROCK", "PAPER", "SCISSOR"];
+randomChoice = compChoices[Math.floor(Math.random() * 15)];
+return randomChoice;}
+
+
 
 function playRound(playerSelection, computerSelection) {
-//Player Choice
+    //Player Choice
 playerSelection = prompt("Choose Rock, Paper, or Scissor");
 return playerSelection.toUpperCase();
 
-//Computers choice
-const computerSelection = function computerPlay() {
-const compChoices = ["Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor"];
-  computerSelection = compChoices[Math.floor(Math.random() * 15)];
-  return computerSelection.toUpperCase;}
-
-
-  // Find Results
+// Find Results
 
   //Tie
   if (playerSelection == "ROCK" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "PARER" ||
@@ -50,7 +60,7 @@ const compChoices = ["Rock", "Paper", "Scissor", "Rock", "Paper", "Scissor", "Ro
 
     else {alert("error")};
 }
-    
+    console.log(playRound(playerSelection, computerSelection));
     </script>
 
 </body>
