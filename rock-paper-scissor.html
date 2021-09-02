@@ -6,30 +6,38 @@
 </head>
 <body>
     <script>
+function game() {
+    alert(playerScore, computerScore, "Round 1")
+    playRound();
+    alert("Round 2");
+    playRound();
+    alert("Round 3")
+    playRound();
+    alert("Round 4")
+    playRound();
+    alert("Final Round")
+    playRound();
 
-
+let playerScore, computerScore;
        
  
  
 
 
-
+function playRound(computerSelection, playerSelection) {
+    //Player Choice
 
 
 
 //Computers choice
-const computerSelection = computerPlay();
+computerSelection = computerPlay()
 function computerPlay(randomChoice){
 const compChoices = ["ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR","ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR", "ROCK", "PAPER", "SCISSOR"];
 randomChoice = compChoices[Math.floor(Math.random() * 15)];
 return randomChoice;}
 
+playerSelection = prompt("Choose Rock, Paper, or Scissor", "Type your selection here").toUpperCase();
 
-
-function playRound(playerSelection, computerSelection) {
-    //Player Choice
-playerSelection = prompt("Choose Rock, Paper, or Scissor");
-return playerSelection.toUpperCase();
 
 // Find Results
 
@@ -40,7 +48,8 @@ return playerSelection.toUpperCase();
 
 // Player point
     else if (playerSelection == "ROCK" && computerSelection == "SCISSOR")
-    {alert("Player wins! Rock beats Scissor")}
+    {   playerScore += playerScore + 1;
+        alert("Player wins! Rock beats Scissor")}
 
     else if (playerSelection == "SCISSOR" && computerSelection == "PAPER")
     {alert("Player wins! Scissor beats Paper")}
@@ -59,8 +68,8 @@ return playerSelection.toUpperCase();
     {alert("Player loses! Scissor cuts Paper")}
 
     else {alert("error")};
-}
-    console.log(playRound(playerSelection, computerSelection));
+}}
+ 
     </script>
 
 </body>
