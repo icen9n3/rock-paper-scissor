@@ -6,20 +6,32 @@
 </head>
 <body>
     <script>
-function game() {
-    alert(playerScore, computerScore, "Round 1")
-    playRound();
-    alert("Round 2");
-    playRound();
-    alert("Round 3")
-    playRound();
-    alert("Round 4")
-    playRound();
-    alert("Final Round")
-    playRound();
 
-let playerScore, computerScore;
        
+function game() {
+    
+let playerScore = 0;
+let computerScore = 0;
+    alert("Round 1")
+    playRound();
+    alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
+      alert("Round 2")
+    playRound();
+    alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
+      alert("Round 3")
+    playRound();
+    alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
+      alert( "Round 4")
+    playRound();
+    alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
+      alert("Round 5")
+    playRound();
+    alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
+  if ( playerScore > computerScore){alert("Player wins!")}
+  else if ( playerScore < computerScore) {alert("Player loses!")}
+  else { alert("Tie Game!")}
+
+
  
  
 
@@ -48,24 +60,29 @@ playerSelection = prompt("Choose Rock, Paper, or Scissor", "Type your selection 
 
 // Player point
     else if (playerSelection == "ROCK" && computerSelection == "SCISSOR")
-    {   playerScore += playerScore + 1;
+    {   playerScore += 1;
         alert("Player wins! Rock beats Scissor")}
 
     else if (playerSelection == "SCISSOR" && computerSelection == "PAPER")
-    {alert("Player wins! Scissor beats Paper")}
+    {playerScore += 1;
+        alert("Player wins! Scissor beats Paper")}
 
     else if (playerSelection == "PAPER" && computerSelection == "ROCK")
-    {alert("Player wins! Paper covers Rock")}
+    {playerScore += 1;
+        alert("Player wins! Paper covers Rock")}
 
     // Computer point
     else if (playerSelection == "ROCK" && computerSelection == "PAPER")
-    {alert("Player loses! Paper covers Rock")}
+    {computerScore += 1;
+        alert("Player loses! Paper covers Rock")}
 
     else if (playerSelection == "SCISSOR" && computerSelection == "ROCK")
-    {alert("Player loses! Rock beats Scissors")}
+    {computerScore += 1;
+        alert("Player loses! Rock beats Scissors")}
 
     else if (playerSelection == "PAPER" && computerSelection == "SCISSOR")
-    {alert("Player loses! Scissor cuts Paper")}
+    {computerScore += 1;
+        alert("Player loses! Scissor cuts Paper")}
 
     else {alert("error")};
 }}
