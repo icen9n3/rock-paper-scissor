@@ -13,6 +13,7 @@ const rock = document.querySelector("#rock");
 const paper = document.querySelector("#paper");
 const scissor = document.querySelector("#scissor");
 const round = document.querySelector("#round")
+const winner = document.querySelector("#winner")
 let roundNum;
 let playerScore = 0
 
@@ -42,41 +43,41 @@ function computerPlay(randomChoice)
 
         if (playerSelection == "ROCK" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "PAPER" ||
       playerSelection == "SCISSOR" && computerSelection == "SCISSOR" )
-    { alert("Tie Game")
-  }
+    { winner.textContent ="Tie Game"  }
     // Player point
         else if (playerSelection == "ROCK" && computerSelection == "SCISSOR")
         {   
           playerScore += 1;
-            alert("Player wins! Rock beats Scissor")
+          winner.textContent ="Player wins! Rock beats Scissor"
           }
+    
     
         else if (playerSelection == "SCISSOR" && computerSelection == "PAPER")
         {   
           playerScore = 1 + playerScore
-            alert("Player wins! Scissor beats Paper")
+          winner.textContent ="Player wins! Scissor beats Paper"
             }
     
         else if (playerSelection == "PAPER" && computerSelection == "ROCK")
         { 
           playerScore = 1 + playerScore
-            alert("Player wins! Paper covers Rock")
+          winner.textContent ="Player wins! Paper covers Rock"
             }
     
         // Computer point
         else if (playerSelection == "ROCK" && computerSelection == "PAPER")
         {
-            alert("Player loses! Paper covers Rock")
+          winner.textContent ="Player loses! Paper covers Rock"
             computerScore += 1;}
     
         else if (playerSelection == "SCISSOR" && computerSelection == "ROCK")
         {
-            alert("Player loses! Rock beats Scissors")
+          winner.textContent ="Player loses! Rock beats Scissors"
             computerScore += 1;}
     
         else if (playerSelection == "PAPER" && computerSelection == "SCISSOR")
         {
-            alert("Player loses! Scissor cuts Paper")
+          winner.textContent ="Player loses! Scissor cuts Paper"
             computerScore += 1;};
          
             roundNum += 1;
@@ -96,9 +97,9 @@ function selectScissor() {playRound(computerPlay(), "SCISSOR")};
 function selectPaper() { playRound(computerPlay(), "PAPER")}; 
 
  function results(playerScore, computerScore) {
-      if ( playerScore > computerScore){alert("Player wins the match!")}
-      else if ( playerScore < computerScore) {alert("Player loses the match!")}
-      else { alert("Tie Game!");} }
+      if ( playerScore > computerScore){winner.textContent ="Player wins the Game!";}
+      else if ( playerScore < computerScore) {winner.textContent ="Player loses the Game!";}
+      else { winner.textContent ="Tie Game!";} }
 
 
 
