@@ -81,9 +81,17 @@ function computerPlay(randomChoice)
             computerScore += 1;};
          
             roundNum += 1;
-            if (roundNum === 6)
-            {results(playerScore, computerScore);
-              game()}
+            if (playerScore === 5 || computerScore === 5)
+            {results(playerScore, computerScore);}
+
+        
+
+
+
+
+           // if (roundNum === 6)
+            //{results(playerScore, computerScore);
+              //game()}
 
 cScore.textContent = 'Computer Score: ' + computerScore;
 pScore.textContent = 'Player Score: ' + playerScore;
