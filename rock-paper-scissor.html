@@ -6,6 +6,8 @@
 </head>
 <body>
     <script>
+
+
        
 function game() {    
 let playerScore = 0;
@@ -26,17 +28,20 @@ let computerScore = 0;
     playRound();
     alert("Player Score: " + playerScore + " Computer Score: " + computerScore)
   
-  if ( playerScore > computerScore){alert("Player wins!")}
-  else if ( playerScore < computerScore) {alert("Player loses!")}
-  else { alert("Tie Game!")} 
+  if ( playerScore > computerScore){alert("Player wins the match!")}
+  else if ( playerScore < computerScore) {alert("Player loses the match!")}
+  else { alert("Tie Game!");} 
 
+  let replay = window.confirm("Play again?")
+window.open (game() )
+window.close ( "End")
 //playRound
-function playRound(computerSelection, playerSelection) {
-
+function playRound(computerSelection, playerSelection) 
+{
 //Computers choice
 computerSelection = computerPlay()
-function computerPlay(randomChoice){
-const compChoices = ["ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR","ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR", "ROCK", "PAPER", "SCISSOR"];
+function computerPlay(randomChoice)
+{const compChoices = ["ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR","ROCK", "PAPER", "SCISSOR", "PAPER", "ROCK", "SCISSOR", "ROCK", "PAPER", "SCISSOR"];
 randomChoice = compChoices[Math.floor(Math.random() * 15)];
 return randomChoice;}
 
@@ -46,7 +51,7 @@ playerSelection = prompt("Choose Rock, Paper, or Scissor", "Type your selection 
 // Find Results
 
   //Tie
-  if (playerSelection == "ROCK" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "PAPER" ||
+    if (playerSelection == "ROCK" && computerSelection == "ROCK" || playerSelection == "PAPER" && computerSelection == "PAPER" ||
   playerSelection == "SCISSOR" && computerSelection == "SCISSOR" )
 { alert("Tie Game")}
 // Player point
@@ -77,7 +82,7 @@ playerSelection = prompt("Choose Rock, Paper, or Scissor", "Type your selection 
 
     else {alert("error - invalid input")};
 }
-    }
+ }  
  
     </script>
 

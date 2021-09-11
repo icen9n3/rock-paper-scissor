@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.background {
+    position:absolute;
+    width:100vw;
+    height:95vh;
+    z-index: -1;}
+
+    body {
+        color: mistyrose;
+    }
+    
+    .score {
+        font-size:65px;
+        float:center;        
+        padding:25px;
+        color:orangered
+    }
+
+    .round {
+        font-size:65px;     
+        position:absolute;
+        top:20%;
+        left:5%;
+        color:orange
+    }
+   
+            
+            
+        
+        #rock{
+            position:absolute;
+            bottom:6%;
+            left:5%;
+        }
+        #paper {
+            position:absolute;
+            bottom:3%;
+            right:5%;
+        }
+
+        #scissor{
+            position:absolute;
+            bottom:4%;
+            right:30%;
+            left:30%
+        }
+    
+        #paper{
+float:right;
+        }
+    
+    
+</style>
+
+<head>
+
+<meta charset="utf-8"> 	</meta>
+</head>
+<body onload ="game()">
+
+<img src="images/fire.jpeg" class="background">
+  
+  <div class="score">
+<div id="pScore" style="float:left">Player Score:</div>
+
+<div id="cScore" style="float:right"> Computer Score:</div>
+  </div>
+<div>Play</div>
+<div id="round" class="round">Round: </div>
+
+<div>Choose:</div>
+ <div class="icons">
+<input type="image" src="images/madrock.png" id="rock" alt="rock" style="height:200px">
+<input type="image" src="images/madscissor.jpg" id="scissor" style="height:250px;" alt="Scissors">
+<input type="image" src="images/paper.jpg" id="paper" alt="paper" style="height:300px;" alt="Paper">
+ </div>
+
+
+<div id="winner"></div>
+</body>
+<script src="rps-js.js"></script>
+</html>
