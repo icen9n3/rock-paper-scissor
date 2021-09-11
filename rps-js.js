@@ -4,7 +4,7 @@
 
 
 
-//<script src="rps-js.js"></script>
+
 
 const cScore = document.querySelector("#cScore");
 const pScore = document.querySelector("#pScore")
@@ -55,7 +55,7 @@ function computerPlay(randomChoice)
         else if (playerSelection == "SCISSOR" && computerSelection == "PAPER")
         {   
           playerScore = 1 + playerScore
-          winner.textContent ="Player wins! Scissor beats Paper"
+          winner.textContent ="Player wins! Scissor cuts Paper"
             }
     
         else if (playerSelection == "PAPER" && computerSelection == "ROCK")
@@ -89,25 +89,17 @@ function computerPlay(randomChoice)
 
 
 
-           // if (roundNum === 6)
-            //{results(playerScore, computerScore);
-              //game()}
-
+     
 cScore.textContent = 'Computer Score: ' + computerScore;
 pScore.textContent = 'Player Score: ' + playerScore;
 round.textContent = "Round: " + roundNum; };
     
-     //   else {alert("error - invalid input")};
+ 
         
 
 function selectRock() {playRound(computerPlay(), "ROCK");};
 function selectScissor() {playRound(computerPlay(), "SCISSOR")};
 function selectPaper() { playRound(computerPlay(), "PAPER")}; 
-
- //function results(playerScore, computerScore) {
-   //   if ( playerScore > computerScore){winner.textContent ="Player wins the Game!";}
-     // else if ( playerScore < computerScore) {winner.textContent ="Player loses the Game!";}
-     // else { winner.textContent ="Tie Game!";} }
 
 
  function results(playerScore, computerScore) {
