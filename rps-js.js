@@ -96,11 +96,16 @@ function selectRock() {playRound(computerPlay(), "ROCK");};
 function selectScissor() {playRound(computerPlay(), "SCISSOR")};
 function selectPaper() { playRound(computerPlay(), "PAPER")}; 
 
- function results(playerScore, computerScore) {
-      if ( playerScore > computerScore){winner.textContent ="Player wins the Game!";}
-      else if ( playerScore < computerScore) {winner.textContent ="Player loses the Game!";}
-      else { winner.textContent ="Tie Game!";} }
+ //function results(playerScore, computerScore) {
+   //   if ( playerScore > computerScore){winner.textContent ="Player wins the Game!";}
+     // else if ( playerScore < computerScore) {winner.textContent ="Player loses the Game!";}
+     // else { winner.textContent ="Tie Game!";} }
 
+
+ function results(playerScore, computerScore) {
+      if ( playerScore > computerScore){window.location.replace("win.html")}
+      else if ( playerScore < computerScore){window.location.replace("lose.html");}
+      else { winner.textContent ="Tie Game!";} }
 
 
 function game() { 
